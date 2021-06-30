@@ -1,13 +1,8 @@
 :root {
-    --pagebg: #0a0c1b;
-    --cardbg: #1c1938;
-    --accent-color: #8250a7;
+    --pagebg: hsl(233, 47%, 7%);
+    --cardbg: hsl(244, 38%, 16%);
+    --accent-color: hsl(277, 64%, 61%);
     --link-color: cyan;
-}
-
-a {
-    color: var(--link-color);
-    text-decoration: none;
 }
 
 body {
@@ -105,6 +100,8 @@ footer {
     bottom: 0;
     left: 0;
     width: 100vw;
+    padding: 0.25em;
+    box-sizing: border-box;
 }
 
 .attribution {
@@ -112,6 +109,12 @@ footer {
     font-size: min(max(0.5rem, 3vw), 18px);
     text-align: center;
 }
+
+.attribution a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
 
 @media (max-width: 50rem) {
     main {
