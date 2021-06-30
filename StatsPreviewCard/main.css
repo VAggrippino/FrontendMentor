@@ -1,0 +1,140 @@
+:root {
+    --pagebg: #0a0c1b;
+    --cardbg: #1c1938;
+    --accent-color: #8250a7;
+    --link-color: cyan;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+body {
+    background: var(--pagebg);
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    display: grid;
+    width: 80vw;
+    height: 50vh;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "details image";
+    background-color: var(--cardbg);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.main--details {
+    grid-area: details;
+    padding: 2rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1.5fr 1fr;
+}
+
+.main--details--heading {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin: 0;
+    font-size: min(max(22px, 2.9vw), 36px);
+}
+
+.main--details--heading em {
+    color: var(--accent-color);
+    font-style: normal;
+}
+
+.main--details--description {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.main--details--point {
+    text-transform: uppercase;
+    flex: 33.3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: min(max(10px, 1.5vw), 20px);
+}
+
+.main--details--point strong {
+    font-size: min(max(20px, 3vw), 28px);
+    font-weight: bold;
+    text-transform: none;
+}
+
+.main--image {
+    grid-area: image;
+    position: relative;
+    background: var(--accent-color);
+}
+
+.main--image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+}
+
+.main--image img {
+    mix-blend-mode: luminosity;
+    filter: brightness(60%);
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.attribution {
+    white-space: nowrap;
+    font-size: min(max(0.5rem, 3vw), 18px);
+    text-align: center;
+}
+
+@media (max-width: 50rem) {
+    main {
+        width: 90vw;
+        height: 90vh;
+        grid-template-rows: 45% 55%;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "image"
+            "details";
+    }
+
+    .main--details {
+        padding: 1rem 2rem;
+    }
+
+    .main--details--heading {
+        font-size: min(max(1rem, 6vw), 48px);
+    }
+
+    .main--details--point {
+        font-size: min(max(10px, 2.5vw), 20px);
+    }
+
+    .main--details--point strong {
+        font-size: min(max(20px, 4vw), 28px);
+        font-weight: bold;
+        text-transform: none;
+    }
+}
