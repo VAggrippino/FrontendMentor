@@ -60,9 +60,10 @@ main {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+    color: hsla(0, 0%, 100%, 0.75);
 }
 
-.main--details--point {
+.main--details--stat {
     text-transform: uppercase;
     flex: 33.3%;
     display: flex;
@@ -71,10 +72,11 @@ main {
     font-size: min(max(15px, 1.5vw), 20px);
 }
 
-.main--details--point strong {
+.main--details--stat strong {
     font-size: min(max(20px, 3vw), 28px);
     font-weight: bold;
     text-transform: none;
+    color: hsla(0, 0%, 100%, 0.6);
 }
 
 .main--image {
@@ -136,11 +138,11 @@ footer {
         font-size: min(max(1rem, 7vw), 48px);
     }
 
-    .main--details--point {
+    .main--details--stat {
         font-size: min(max(10px, 2.5vw), 20px);
     }
 
-    .main--details--point strong {
+    .main--details--stat strong {
         font-size: min(max(20px, 4vw), 28px);
         font-weight: bold;
         text-transform: none;
