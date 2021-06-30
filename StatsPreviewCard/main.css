@@ -13,7 +13,9 @@ a {
 body {
     background: var(--pagebg);
     color: white;
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,6 +50,8 @@ main {
     grid-row-start: 1;
     grid-row-end: 2;
     margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     font-size: min(max(22px, 2.9vw), 36px);
 }
 
@@ -69,7 +73,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    font-size: min(max(10px, 1.5vw), 20px);
+    font-size: min(max(15px, 1.5vw), 20px);
 }
 
 .main--details--point strong {
