@@ -22,7 +22,7 @@ body {
 main {
     display: grid;
     width: 80vw;
-    height: 50vh;
+    height: 60vh;
     max-width: 60rem;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
